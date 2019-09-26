@@ -19,3 +19,7 @@ RUN make
 ENV PATH ${PIKA}/output/bin:${PATH}
 
 WORKDIR ${PIKA}/output
+
+EXPOSE 9221
+
+CMD ["/pika/output/bin/pika", "-c", "/pika/conf/pika.conf"]
